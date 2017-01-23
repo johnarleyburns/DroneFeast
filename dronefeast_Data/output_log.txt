@@ -1,0 +1,128 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.21.13.6909
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.098 seconds
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.814500 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2348 -> priority: 1 
+  Thread -> id: 2b00 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.118021 ms
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 750.
+Total: 0.350275 ms (FindLiveObjects: 0.029636 ms CreateObjectMapping: 0.018650 ms MarkObjects: 0.286403 ms  DeleteObjects: 0.015329 ms)
+
+Contact point (-72.6, -76.0, -33.5)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Explosion contact=(-72.6, -76.0, -33.5) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Contact point (28.9, -83.1, -16.2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Explosion contact=(28.9, -83.1, -16.2) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Contact point (71.6, -81.1, -13.7)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Explosion contact=(71.6, -81.1, -13.7) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Contact point (75.9, -21.3, 53.6)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Explosion contact=(75.9, -21.3, 53.6) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Contact point (34.6, -70.1, 60.2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Explosion contact=(34.6, -70.1, 60.2) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Contact point (0.0, -0.3, 0.4)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Explosion contact=(0.0, -0.3, 0.4) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.808112 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 751.
+Total: 0.271840 ms (FindLiveObjects: 0.017373 ms CreateObjectMapping: 0.017884 ms MarkObjects: 0.232239 ms  DeleteObjects: 0.004087 ms)
+
+Contact point (76.8, -33.3, 59.2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Explosion contact=(76.8, -33.3, 59.2) normal=normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+prefab not ok
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 0.461669 ms
+
+Unloading 74 unused Assets to reduce memory usage. Loaded Objects now: 778.
+Total: 3.786863 ms (FindLiveObjects: 0.018139 ms CreateObjectMapping: 0.018139 ms MarkObjects: 0.265453 ms  DeleteObjects: 3.484875 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.175521 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 987.
+Total: 0.378635 ms (FindLiveObjects: 0.020694 ms CreateObjectMapping: 0.017117 ms MarkObjects: 0.338012 ms  DeleteObjects: 0.002554 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.183185 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1196.
+Total: 0.481597 ms (FindLiveObjects: 0.027337 ms CreateObjectMapping: 0.017373 ms MarkObjects: 0.432799 ms  DeleteObjects: 0.003576 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.202092 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1378.
+Total: 0.686244 ms (FindLiveObjects: 0.068215 ms CreateObjectMapping: 0.029892 ms MarkObjects: 0.570252 ms  DeleteObjects: 0.017373 ms)
+
