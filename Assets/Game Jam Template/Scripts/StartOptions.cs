@@ -19,6 +19,7 @@ public class StartOptions : MonoBehaviour {
 	 public AnimationClip fadeColorAnimationClip;		//Animation clip fading to color (black default) when changing scenes
 	[HideInInspector] public AnimationClip fadeAlphaAnimationClip;		//Animation clip fading out UI elements alpha
 
+    public GameObject OptionsPrefab;
 
 	private PlayMusic playMusic;										//Reference to PlayMusic script
 	private float fastFadeIn = .01f;									//Very short fade time (10 milliseconds) to start playing music immediately without a click/glitch
@@ -92,8 +93,17 @@ public class StartOptions : MonoBehaviour {
 		//Hide the main menu UI element
 		showPanels.HideMenu ();
 
-		//Load the selected scene, by scene index number in build settings
-		SceneManager.LoadScene (sceneToStart);
+        //Load the selected scene, by scene index number in build settings
+        GameOptions uiOptions = GetComponent<GameOptions>();
+        GameObject optionsG = new GameObject("GameOptions");
+        optionsG.AddComponent<GameOptions>();
+        optionsG.GetComponent<GameOptions>().SetFrom(uiOptions);
+        optionsG.tag = "GameOptions";
+        DontDestroyOnLoad(optionsG);
+
+        SceneManager.LoadScene (sceneToStart);
+        Scene scene = SceneManager.GetSceneAt(sceneToStart);
+        SceneManager.MoveGameObjectToScene(optionsG, scene);
 	}
 
 	public void HideDelayed()

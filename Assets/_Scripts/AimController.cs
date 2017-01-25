@@ -14,8 +14,17 @@ public class AimController : MonoBehaviour {
     private Quaternion spin = Quaternion.identity;
     private bool killingRot = false;
 
+    private bool invertPitch = false;
+    private float pitchMultiplier = 1;
+
 	// Use this for initialization
 	void Start () {
+        GameObject gameOptions = GameObject.FindGameObjectWithTag("GameOptions");
+        if (gameOptions != null)
+        {
+            invertPitch = gameOptions.GetComponent<GameOptions>().IsInvertedPitch;
+            pitchMultiplier = invertPitch ? -1 : 1;
+        }
 	}
 
     private void UpdateGetInput(out float x, out float y, out float z, out float k)
@@ -109,7 +118,7 @@ public class AimController : MonoBehaviour {
         }
         if (y != 0)
         {
-            q *= Quaternion.AngleAxis(controlFactor * y, Vector3.right);
+            q *= Quaternion.AngleAxis(pitchMultiplier * controlFactor * y, Vector3.right);
         }
         if (z != 0)
         {

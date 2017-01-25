@@ -42,7 +42,6 @@ public class ScoreController : MonoBehaviour {
         VictorySubtitleText.enabled = false;
         remainingCounter = StartingTargetCount;
         SyncCounters();
-        Speaker.Speak("Destroy all drones before the drop ship arrives.");
 	}
 	
     public bool IsRunning
@@ -63,7 +62,14 @@ public class ScoreController : MonoBehaviour {
         {
             UpdateInGame();
         }
-	}
+        if (!hasSpoken)
+        {
+            Speaker.Speak("Destroy all drones before the drop ship arrives.");
+            hasSpoken = true;
+        }
+    }
+
+    private bool hasSpoken = false;
 
     private void UpdateGameOver()
     {
