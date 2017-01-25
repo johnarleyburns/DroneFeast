@@ -19,110 +19,317 @@ Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngi
 Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.098 seconds
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\RTVoice.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\RTVoice.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\RTVoiceUWPBridge.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\RTVoiceUWPBridge.dll into Unity Child Domain
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+- Completed reload, in  6.812 seconds
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.21.13.6909
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assPmbaly: D:\unity-y: D:\unity-pporoject\Droneast\dronefeasteFatast\dronefeastManaged\Syst_m.ata\ManagedCRTVoide.dll (thislmlssa(this message is harme is harllees)s
+
+Loading D:\unity-project\DroneFeast\dronefeast_Data\Managed\RTVoice.dll into Unity Child Domain
+Platform assembly: D:\unity-project\DroneFeast\dPonatform asseebfeast_Dataty\Maoject\DroneFeast\dronegeeast_Data\Manage\dTVoiceUWPBridge.Sdltem.dll lthis me message is sarsage is
+Loadin harmlessy)
+roject\DroneFeast\dronefeast_Data\Managed\RTVoiceUWPBridge.dll into Unity Child Domain
+- Completed reload, in  0.019 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
 Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\unity-project\DroneFeast\dronefeast_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.814500 ms
+UnloadTime: 0.804536 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2348 -> priority: 1 
-  Thread -> id: 2b00 -> priority: 1 
+  Thread -> id: 1160 -> priority: 1 
+  Thread -> id: 890 -> priority: 1 
+Non platform assembly: data-16D23828 (this message is harmless)
+Fallback handler could not load library D:/unity-project/DroneFeast/dronefeast_Data/Mono/data-16D23828.dll
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.118021 ms
+UnloadTime: 1.024256 ms
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 750.
-Total: 0.350275 ms (FindLiveObjects: 0.029636 ms CreateObjectMapping: 0.018650 ms MarkObjects: 0.286403 ms  DeleteObjects: 0.015329 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 911.
+Total: 0.395753 ms (FindLiveObjects: 0.044455 ms CreateObjectMapping: 0.021205 ms MarkObjects: 0.323960 ms  DeleteObjects: 0.005876 ms)
 
-Contact point (-72.6, -76.0, -33.5)
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Explosion contact=(-72.6, -76.0, -33.5) normal=normal
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Contact point (28.9, -83.1, -16.2)
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Explosion contact=(28.9, -83.1, -16.2) normal=normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Contact point (71.6, -81.1, -13.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Explosion contact=(71.6, -81.1, -13.7) normal=normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Contact point (75.9, -21.3, 53.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Explosion contact=(75.9, -21.3, 53.6) normal=normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Contact point (34.6, -70.1, 60.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Explosion contact=(34.6, -70.1, 60.2) normal=normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Contact point (0.0, -0.3, 0.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Explosion contact=(0.0, -0.3, 0.4) normal=normal
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.808112 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 751.
-Total: 0.271840 ms (FindLiveObjects: 0.017373 ms CreateObjectMapping: 0.017884 ms MarkObjects: 0.232239 ms  DeleteObjects: 0.004087 ms)
-
-Contact point (76.8, -33.3, 59.2)
+UnloadTime: 0.848224 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 918.
+Total: 0.366116 ms (FindLiveObjects: 0.020950 ms CreateObjectMapping: 0.019161 ms MarkObjects: 0.279760 ms  DeleteObjects: 0.046243 ms)
+
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-Explosion contact=(76.8, -33.3, 59.2) normal=normal
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-prefab not ok
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+UnloadTime: 1.580968 ms
 
-UnloadTime: 0.461669 ms
-
-Unloading 74 unused Assets to reduce memory usage. Loaded Objects now: 778.
-Total: 3.786863 ms (FindLiveObjects: 0.018139 ms CreateObjectMapping: 0.018139 ms MarkObjects: 0.265453 ms  DeleteObjects: 3.484875 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.175521 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 987.
-Total: 0.378635 ms (FindLiveObjects: 0.020694 ms CreateObjectMapping: 0.017117 ms MarkObjects: 0.338012 ms  DeleteObjects: 0.002554 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.183185 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1196.
-Total: 0.481597 ms (FindLiveObjects: 0.027337 ms CreateObjectMapping: 0.017373 ms MarkObjects: 0.432799 ms  DeleteObjects: 0.003576 ms)
+Unloading 129 unused Assets to reduce memory usage. Loaded Objects now: 825.
+Total: 4.666769 ms (FindLiveObjects: 0.020439 ms CreateObjectMapping: 0.019417 ms MarkObjects: 0.290491 ms  DeleteObjects: 4.335910 ms)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.202092 ms
+UnloadTime: 0.196215 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1378.
-Total: 0.686244 ms (FindLiveObjects: 0.068215 ms CreateObjectMapping: 0.029892 ms MarkObjects: 0.570252 ms  DeleteObjects: 0.017373 ms)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1125.
+Total: 0.533461 ms (FindLiveObjects: 0.045477 ms CreateObjectMapping: 0.022483 ms MarkObjects: 0.443529 ms  DeleteObjects: 0.021461 ms)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.634380 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1125.
+Total: 0.471633 ms (FindLiveObjects: 0.025804 ms CreateObjectMapping: 0.020439 ms MarkObjects: 0.369948 ms  DeleteObjects: 0.055441 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 0.596823 ms
+
+Unloading 129 unused Assets to reduce memory usage. Loaded Objects now: 1032.
+Total: 6.286060 ms (FindLiveObjects: 0.033469 ms CreateObjectMapping: 0.020439 ms MarkObjects: 0.398818 ms  DeleteObjects: 5.832822 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.207457 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1334.
+Total: 0.649709 ms (FindLiveObjects: 0.053397 ms CreateObjectMapping: 0.032702 ms MarkObjects: 0.544703 ms  DeleteObjects: 0.018395 ms)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.662739 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1334.
+Total: 0.585070 ms (FindLiveObjects: 0.029381 ms CreateObjectMapping: 0.029892 ms MarkObjects: 0.447872 ms  DeleteObjects: 0.077668 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 0.476998 ms
+
+Unloading 129 unused Assets to reduce memory usage. Loaded Objects now: 1241.
+Total: 7.279147 ms (FindLiveObjects: 0.037045 ms CreateObjectMapping: 0.029892 ms MarkObjects: 0.463713 ms  DeleteObjects: 6.747985 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.211289 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1543.
+Total: 0.763146 ms (FindLiveObjects: 0.059273 ms CreateObjectMapping: 0.031936 ms MarkObjects: 0.653030 ms  DeleteObjects: 0.018395 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at GravityEngine.GetVelocity (UnityEngine.GameObject body) [0x00000] in <filename unknown>:0 
+  at NBody.UpdateVelocity () [0x00000] in <filename unknown>:0 
+  at OrbitPredictor.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at GravityEngine.GetVelocity (UnityEngine.GameObject body) [0x00000] in <filename unknown>:0 
+  at NBody.UpdateVelocity () [0x00000] in <filename unknown>:0 
+  at OrbitPredictor.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.862532 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1543.
+Total: 0.629525 ms (FindLiveObjects: 0.033724 ms CreateObjectMapping: 0.030147 ms MarkObjects: 0.526308 ms  DeleteObjects: 0.039345 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 0.456304 ms
+
+Unloading 129 unused Assets to reduce memory usage. Loaded Objects now: 1450.
+Total: 7.427587 ms (FindLiveObjects: 0.034235 ms CreateObjectMapping: 0.030658 ms MarkObjects: 0.560543 ms  DeleteObjects: 6.802149 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.197237 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1754.
+Total: 0.852823 ms (FindLiveObjects: 0.065405 ms CreateObjectMapping: 0.031936 ms MarkObjects: 0.747050 ms  DeleteObjects: 0.008175 ms)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.734787 ms
+Only one active instance of 'RTVoice' allowed in all scenes!
+This object will now be destroyed.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1752.
+Total: 0.776432 ms (FindLiveObjects: 0.037556 ms CreateObjectMapping: 0.030658 ms MarkObjects: 0.658140 ms  DeleteObjects: 0.049820 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at GravityEngine.GetVelocity (UnityEngine.GameObject body) [0x00000] in <filename unknown>:0 
+  at NBody.UpdateVelocity () [0x00000] in <filename unknown>:0 
+  at OrbitPredictor.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+NullReferenceException: Object reference not set to an instance of an object
+  at GravityEngine.GetVelocity (UnityEngine.GameObject body) [0x00000] in <filename unknown>:0 
+  at NBody.UpdateVelocity () [0x00000] in <filename unknown>:0 
+  at OrbitPredictor.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+'Voice' or 'Voice.Name' is null! Using the OS 'default' voice.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at GravityEngine.GetVelocity (UnityEngine.GameObject body) [0x00000] in <filename unknown>:0 
+  at NBody.UpdateVelocity () [0x00000] in <filename unknown>:0 
+  at OrbitPredictor.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnloadTime: 0.473166 ms
+
+Unloading 129 unused Assets to reduce memory usage. Loaded Objects now: 1659.
+Total: 7.936777 ms (FindLiveObjects: 0.040878 ms CreateObjectMapping: 0.030403 ms MarkObjects: 0.692887 ms  DeleteObjects: 7.172097 ms)
 

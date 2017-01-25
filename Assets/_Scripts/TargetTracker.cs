@@ -46,7 +46,7 @@ public class TargetTracker : MonoBehaviour {
 
     private void UpdateNearestTarget()
     {
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("EnemyNBody");
         GameObject nearest = null;
         float nearestDist = 0;
         foreach (GameObject t in targets)

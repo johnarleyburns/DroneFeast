@@ -62,17 +62,18 @@ public class RandomShips : MonoBehaviour {
 		}
 
 		for (int i=0; i < numPlanets; i++) {
-			AddBody();
+			AddBody(i);
 		}
 	}
 
-	private void AddBody() {
+	private void AddBody(int i) {
 
 		// Pick a prefab
 		int prefabNum = (int) Random.Range(0, shipPrefabs.Length);
 
 		GameObject ship = Instantiate(shipPrefabs[prefabNum]) as GameObject;
-		// make a child of this object
+        // make a child of this object
+        ship.name = "Drone " + i.ToString();
 		ship.transform.parent = gameObject.transform;
 
 		OrbitEllipse oe = ship.GetComponent<OrbitEllipse>();
