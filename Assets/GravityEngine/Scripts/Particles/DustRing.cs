@@ -41,7 +41,7 @@ public class DustRing : EllipseBase, IGravityParticlesInit {
 
 			float physicalScale = GravityEngine.instance.physToWorldFactor;
 			float a_phy =  a_scaled/physicalScale;
-			Debug.Log("a_phy=" + a_phy);
+			//Debug.Log("a_phy=" + a_phy);
 			a_phy = Random.Range( a_phy * (1f-0.5f*ringWidthPercent), a_phy * (1f + 0.5f*ringWidthPercent));
 			// Phase is TRUE anomoly f
 			// Murray and Dermott(2.26)

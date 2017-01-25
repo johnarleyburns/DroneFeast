@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThrustController : MonoBehaviour {
 
+    public ScoreController Scorer;
     public ParticleSystem thrustPS;
     public AudioSource thrustSound;
 
@@ -16,8 +17,8 @@ public class ThrustController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        float t = Input.GetAxisRaw("Thrust");
+        float t;
+        UpdateGetInput(out t);
         if (t > 0)
         {
             GameObject nBody = transform.parent.gameObject;
@@ -46,4 +47,17 @@ public class ThrustController : MonoBehaviour {
         }
 
 	}
+
+    private void UpdateGetInput(out float t)
+    {
+        if (Scorer.IsRunning)
+        {
+            t = Input.GetAxisRaw("Thrust");
+        }
+        else
+        {
+            t = 0;
+        }
+    }
+
 }

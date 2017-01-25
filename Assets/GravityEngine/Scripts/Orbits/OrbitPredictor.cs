@@ -46,7 +46,8 @@ public class OrbitPredictor: MonoBehaviour  {
 		}
 		initOk = true;
 		lineR = GetComponent<LineRenderer>();
-		lineR.SetVertexCount(numPoints);
+        lineR.numPositions = numPoints;
+		//lineR.SetVertexCount(numPoints);
 		orbitData = new OrbitData(); 
 
 		ellipseBase = transform.gameObject.AddComponent<EllipseBase>();

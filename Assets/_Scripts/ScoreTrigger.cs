@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Greyman;
 
 public class ScoreTrigger : MonoBehaviour {
 
-    public ScoreController scorer;
+    public ScoreController Scorer;
+    public OffScreenIndicator Indicator;
+    public TargetTracker TargetTracker;
 
 	// Use this for initialization
 	void Start () {
@@ -20,8 +23,12 @@ public class ScoreTrigger : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
-            scorer.ScoreHit();
-            GravityEngine.instance.InactivateBody(other.transform.parent.gameObject);
+            GameObject nBody = other.transform.parent.gameObject;
+            Scorer.ScoreHit();
+            Indicator.RemoveIndicator(nBody.transform);
+            TargetTracker.RemoveTarget(nBody);
+            GravityEngine.instance.InactivateBody(nBody);
+            nBody.SetActive(false);
             Destroy(other.gameObject);
         }
     }

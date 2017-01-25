@@ -141,7 +141,7 @@ public class NBodyCollision : MonoBehaviour {
         // add a small offset (5%) to ensure particles are outside the body, otherwise
         // they will be immediately culled by GravityParticles
         Vector3 contactPoint = body2Pos + (0.5f * 1.05f * otherBody.transform.localScale.x) * normal;
-        Debug.Log("Contact point " + contactPoint);
+        //Debug.Log("Contact point " + contactPoint);
         // collision will do velocity update from collision
         CollisionType cType = collisionType == CollisionType.EXPLODE_OR_BOUNCE ? CollisionType.EXPLODE : collisionType;
         GravityEngine.instance.Collision(otherBody.transform.parent.gameObject, transform.parent.gameObject, cType, 0f);
@@ -247,7 +247,7 @@ public class NBodyCollision : MonoBehaviour {
 	}
 
 	private void StartExplosion(Vector3 contactPoint, Vector3 normal, GameObject otherNBodyGO) {
-		Debug.Log("Explosion contact=" + contactPoint + " normal=normal");
+		//Debug.Log("Explosion contact=" + contactPoint + " normal=normal");
 		if (!prefabOk) {
 			Debug.LogError("prefab not ok");
 			return;

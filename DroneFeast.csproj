@@ -73,6 +73,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="RTVoice">
+      <HintPath>Assets\crosstales\RTVoice\Plugins\RTVoice.dll</HintPath>
+    </Reference>
+    <Reference Include="RTVoiceUWPBridge">
+      <HintPath>Assets\crosstales\RTVoice\Plugins\WSA\Stub\RTVoiceUWPBridge.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Game Jam Template\Scripts\DontDestroy.cs" />
@@ -133,8 +139,14 @@
     <Compile Include="Assets\GravityEngine\Scripts\ThreeBodySolutions\Lagrange.cs" />
     <Compile Include="Assets\GravityEngine\Scripts\ThreeBodySolutions\SolutionServer.cs" />
     <Compile Include="Assets\GravityEngine\Scripts\ThreeBodySolutions\ThreeBodySolution.cs" />
-    <Compile Include="Assets\NBodyLifetime.cs" />
-    <Compile Include="Assets\PlayerDeathTrigger.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\ArrowIndicator.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\ArrowIndicatorCanvas.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\ArrowIndicatorVR.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\Helpers\Utils.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\OffScreenIndicator.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\OffScreenIndicatorManager.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\OffScreenIndicatorManagerCanvas.cs" />
+    <Compile Include="Assets\OffScreenIndicator\Scripts\OffScreenIndicatorManagerVR.cs" />
     <Compile Include="Assets\SolarSystem\Scripts\GlobalValues.cs" />
     <Compile Include="Assets\SolarSystem\Scripts\ObjectRotation.cs" />
     <Compile Include="Assets\SolarSystem\Scripts\PlanetInfo.cs" />
@@ -152,12 +164,40 @@
     <Compile Include="Assets\UltimateMenus\Scripts\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\AimController.cs" />
     <Compile Include="Assets\_Scripts\GunController.cs" />
+    <Compile Include="Assets\_Scripts\LevelMessage.cs" />
+    <Compile Include="Assets\_Scripts\NBodyLifetime.cs" />
+    <Compile Include="Assets\_Scripts\PlayerDeathTrigger.cs" />
     <Compile Include="Assets\_Scripts\PositionController.cs" />
     <Compile Include="Assets\_Scripts\PositionReporter.cs" />
     <Compile Include="Assets\_Scripts\RandomShips.cs" />
     <Compile Include="Assets\_Scripts\ScoreController.cs" />
     <Compile Include="Assets\_Scripts\ScoreTrigger.cs" />
+    <Compile Include="Assets\_Scripts\TargetTracker.cs" />
     <Compile Include="Assets\_Scripts\ThrustController.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Dialog.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUIAudioFilter.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUIDialog.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUIMain.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUIMultiAudioFilter.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUIScenes.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUISpeech.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\GUISpeechMobile.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\NativeAudio.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\NativeDisabler.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\PreGeneratedAudio.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\SendMessage.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\SequenceCaller.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Simple.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\SimpleNative.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\SpeakWrapper.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\AudioVisualizer.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\FFTAnalyzer.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\MaterialChanger.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\PlatformEnabler.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\RandomColor.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\RandomRotator.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\RandomScaler.cs" />
+    <Compile Include="Assets\crosstales\RTVoice\Demo\Scripts\Util\ScrollRectHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game Jam Template\Fonts\OpenSans\License!.txt" />
@@ -169,6 +209,8 @@
     <None Include="Assets\SolarSystem\Shaders\DisplayNightEarthTexture.shader" />
     <None Include="Assets\SolarSystem\Shaders\Luminance.shader" />
     <None Include="Assets\UltimateMenus\Readme.txt" />
+    <None Include="Assets\crosstales\RTVoice\3rd party\Assets.txt" />
+    <None Include="Assets\crosstales\RTVoice\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

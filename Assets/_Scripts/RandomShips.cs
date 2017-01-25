@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Greyman;
 
 /// <summary>
 /// Random planets.
@@ -38,6 +39,8 @@ public class RandomShips : MonoBehaviour {
 	public float scale_min = 0.5f;
 	public float scale_max = 2f;
 
+    public OffScreenIndicator OffscreenIndicator;
+    public int DroneIndicatorId;
 
 	// Use this for initialization
 	void Start () {
@@ -68,11 +71,11 @@ public class RandomShips : MonoBehaviour {
 		// Pick a prefab
 		int prefabNum = (int) Random.Range(0, shipPrefabs.Length);
 
-		GameObject planet = Instantiate(shipPrefabs[prefabNum]) as GameObject;
+		GameObject ship = Instantiate(shipPrefabs[prefabNum]) as GameObject;
 		// make a child of this object
-		planet.transform.parent = gameObject.transform;
+		ship.transform.parent = gameObject.transform;
 
-		OrbitEllipse oe = planet.GetComponent<OrbitEllipse>();
+		OrbitEllipse oe = ship.GetComponent<OrbitEllipse>();
 		oe.centerObject = gameObject;
 		// set ranges with appropriate limits
 		oe.a = Random.Range(Mathf.Max(a_min, 0.1f), a_max);
@@ -83,21 +86,26 @@ public class RandomShips : MonoBehaviour {
 		oe.phase = Random.Range(Mathf.Max(0, phase_min), Mathf.Min(359.9f, phase_max));
 
 		// If there is a MeshRenderer - apply scale
-		MeshRenderer mr = planet.GetComponentInChildren<MeshRenderer>();
+		MeshRenderer mr = ship.GetComponentInChildren<MeshRenderer>();
 		if (mr != null) {
 			mr.transform.localScale = Random.Range(Mathf.Max(scale_min, 0.01f), scale_max) * Vector3.one;
 		}
 
 		// If there is an OrbitPredictor, assign the parent
-		OrbitPredictor op = planet.GetComponentInChildren<OrbitPredictor>();
+		OrbitPredictor op = ship.GetComponentInChildren<OrbitPredictor>();
 		if (op != null) {
-			op.body = planet;
+			op.body = ship;
 			op.centerBody = gameObject;
 		}
 
 		oe.Init();
 
+        AddIndicator(ship);
 	}
 	
+    private void AddIndicator(GameObject g)
+    {
+        OffscreenIndicator.AddIndicator(g.transform, DroneIndicatorId);
+    }
 
 }

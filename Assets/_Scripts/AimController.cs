@@ -5,59 +5,133 @@ using UnityEngine.UI;
 
 public class AimController : MonoBehaviour {
 
-    public Text rotationDir;
+    public ScoreController Scorer;
     public AudioSource AimAS;
 
     private float controlFactor = 0.5f;
     private float killRotFactor = 0.5f;
-    private Rigidbody rb;
+
     private Quaternion spin = Quaternion.identity;
-            
+    private bool killingRot = false;
+
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        float z = Input.GetAxis("Roll");
-        // bool killRot = Input.GetAxisRaw("Fire2") == 1;
 
-        // if (killRot)
-        // {
-        //     spin = Quaternion.Slerp(spin, Quaternion.identity, controlFactor);
-        // }
-        // else
-        //        {
-        Quaternion spin0 = spin;
-            if (h != 0)
-            {
-                Quaternion q = Quaternion.Euler(0, controlFactor * h, 0);
-                spin = q * spin;
-            }
-            if (v != 0)
-            {
-                Quaternion q = Quaternion.Euler(controlFactor * v, 0, 0);
-                spin = q * spin;
-            }
-            if (z != 0)
-            {
-                Quaternion q = Quaternion.Euler(0, 0, controlFactor * -z);
-                spin = q * spin;
-            }
-            if (h == 0 && v == 0 && z == 0 && spin != Quaternion.identity)
-            {
-                spin = Quaternion.Slerp(spin, Quaternion.identity, killRotFactor * Time.deltaTime);
-            }
-//        }
+    private void UpdateGetInput(out float x, out float y, out float z, out float k)
+    {
+        if (Scorer.IsRunning)
+        {
+            x = Input.GetAxis("Horizontal");
+            y = Input.GetAxis("Vertical");
+            z = Input.GetAxis("Roll");
+            k = Input.GetAxisRaw("KillRotation");
+        }
+        else
+        {
+            x = 0;
+            y = 0;
+            z = 0;
+            k = 0;
+        }
+    }
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * spin, Time.deltaTime);
+    // Update is called once per frame
+    void Update() {
+        float x, y, z, k;
+        UpdateGetInput(out x, out y, out z, out k);
+        bool rcsInput = (x != 0 || y != 0 || z != 0);
+        bool killRot = k != 0;
 
-        rotationDir.text = transform.rotation.ToString();
+        Quaternion q = Quaternion.identity;
 
-        if (spin != spin0)
+        /*
+        if (killRot)
+        {
+            killingRot = true;
+        }
+        else if (rcsInput)
+        {
+            killingRot = false;
+            q = RotInput(x, y, z);
+        }
+
+        if (killingRot)
+        {
+            q = KillRotQ();
+            if (q == Quaternion.identity)
+            {
+                killingRot = false;
+            }
+        }
+        */
+
+        if (rcsInput)
+        {
+            killingRot = false;
+            q = RotInput(x, y, z);
+        }
+        else
+        {
+            float angle;
+            Vector3 axis;
+            spin.ToAngleAxis(out angle, out axis);
+            if (angle != 0)
+            {
+                killingRot = true;
+            }
+        }
+
+        if (killingRot)
+        {
+            q = KillRotQ();
+            float angle;
+            Vector3 axis;
+            q.ToAngleAxis(out angle, out axis);
+            if (angle != 0)
+            {
+                killingRot = false;
+            }
+        }
+
+        spin = q * spin;
+        transform.rotation *= Quaternion.Lerp(Quaternion.identity, spin, killRotFactor * Time.deltaTime);
+
+        UpdateSounds(q);
+    }
+
+    private Quaternion RotInput(float x, float y, float z)
+    {
+        Quaternion q = Quaternion.identity;
+        if (x != 0)
+        {
+            q *= Quaternion.AngleAxis(controlFactor * x, Vector3.up);
+        }
+        if (y != 0)
+        {
+            q *= Quaternion.AngleAxis(controlFactor * y, Vector3.right);
+        }
+        if (z != 0)
+        {
+            q *= Quaternion.AngleAxis(controlFactor * -z, Vector3.forward);
+        }
+        return q;
+    }
+
+    private Quaternion KillRotQ()
+    {
+        //       Quaternion q = Quaternion.Slerp(Quaternion.identity, Quaternion.Inverse(spin), Time.deltaTime);
+        float angle;
+        Vector3 axis;
+        spin.ToAngleAxis(out angle, out axis);
+        Quaternion dest = Quaternion.AngleAxis(0, axis);
+        Quaternion q = Quaternion.Slerp(dest, Quaternion.Inverse(spin), Time.deltaTime);
+        return q;
+    }
+
+    private void UpdateSounds(Quaternion q)
+    {
+        if (q != Quaternion.identity)
         {
             if (!AimAS.isPlaying)
             {
