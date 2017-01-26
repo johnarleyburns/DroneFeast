@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerDeathTrigger : MonoBehaviour {
 
-    public ScoreController scorer;
-    public ParticleSystem Explosion;
+    public Camera PlayerCamera;
+    public ScoreController Scorer;
+    public GameObject Explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -20,12 +21,17 @@ public class PlayerDeathTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Camera.current.transform.parent = null;
-        scorer.PlayerDeath();
-        GravityEngine.instance.InactivateBody(transform.parent.gameObject);
-        Explosion.Play();
+        PlayerCamera.transform.parent = null;
+        GameObject nBody = transform.parent.gameObject;
+
+        GameObject e = Instantiate(Explosion);
+        e.transform.position = nBody.transform.position;
+        e.GetComponent<ParticleSystem>().Play();
+
+        Scorer.PlayerDeath(other.gameObject);
+
+        GravityEngine.instance.InactivateBody(nBody);
         transform.GetChild(0).gameObject.SetActive(false);
-        //Destroy(gameObject);
     }
 
 

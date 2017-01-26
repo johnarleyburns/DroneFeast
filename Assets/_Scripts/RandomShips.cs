@@ -39,6 +39,8 @@ public class RandomShips : MonoBehaviour {
 	public float scale_min = 0.5f;
 	public float scale_max = 2f;
 
+    public ScoreController Scorer;
+    public TargetTracker Tracker;
     public OffScreenIndicator OffscreenIndicator;
     public int DroneIndicatorId;
 
@@ -102,11 +104,19 @@ public class RandomShips : MonoBehaviour {
 		oe.Init();
 
         AddIndicator(ship);
+        AddScorer(ship.GetComponentInChildren<ScoreTrigger>());
 	}
 	
     private void AddIndicator(GameObject g)
     {
         OffscreenIndicator.AddIndicator(g.transform, DroneIndicatorId);
+    }
+
+    private void AddScorer(ScoreTrigger t)
+    {
+        t.Scorer = Scorer;
+        t.Indicator = OffscreenIndicator;
+        t.TargetTracker = Tracker;
     }
 
 }

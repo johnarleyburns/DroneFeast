@@ -56,13 +56,11 @@ GameObject:
   - component: {fileID: 4131594779898866}
   - component: {fileID: 54470822406726974}
   - component: {fileID: 136535915378328694}
-  - component: {fileID: 114751293195092550}
   - component: {fileID: 82398548361284976}
-  - component: {fileID: 114664989127602222}
   - component: {fileID: 114113181173250610}
   m_Layer: 0
   m_Name: BulletModel
-  m_TagString: Untagged
+  m_TagString: WeaponModel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +94,7 @@ GameObject:
   - component: {fileID: 114984841797808812}
   m_Layer: 0
   m_Name: NBodyBullet
-  m_TagString: Untagged
+  m_TagString: WeaponNBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,38 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8a9f25655ef374994e630010e50a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifetimeSec: 1
---- !u!114 &114664989127602222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254676788933416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 148825939fff67e4096124f8cb9dc62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scorer: {fileID: 0}
-  Indicator: {fileID: 0}
-  TargetTracker: {fileID: 0}
---- !u!114 &114751293195092550
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254676788933416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 805595b6a880c4313b32ed0736e1bf77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionType: 2
-  collisionPrecedence: 3
-  explosionPrefab: {fileID: 1162435499339466, guid: 7745e52a17dd96c49bc2cfac4a52727e,
-    type: 2}
-  explodeOrBounceVelocity: 0
-  bounceFactor: 1
+  LifetimeSec: 2
 --- !u!114 &114984841797808812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -478,8 +445,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 0
-  m_Radius: 2
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 1
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!205 &205327475241872004

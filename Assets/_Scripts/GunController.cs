@@ -38,9 +38,6 @@ public class GunController : MonoBehaviour {
             Vector3 v = GravityEngine.instance.GetVelocity(transform.parent.gameObject) + bulletV * transform.forward;
             GravityEngine.instance.AddBody(b);
             GravityEngine.instance.UpdatePositionAndVelocity(b.GetComponent<NBody>(), p, v);
-            b.GetComponentInChildren<ScoreTrigger>().Scorer = Scorer;
-            b.GetComponentInChildren<ScoreTrigger>().Indicator = Indicator;
-            b.GetComponentInChildren<ScoreTrigger>().TargetTracker = GetComponent<TargetTracker>();
             b.GetComponentInChildren<CapsuleCollider>().enabled = true;
         }
         timer -= Time.deltaTime;

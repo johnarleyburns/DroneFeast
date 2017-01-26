@@ -142,10 +142,11 @@ public class ScoreController : MonoBehaviour {
     }
 
 
-    public void PlayerDeath()
+    public void PlayerDeath(GameObject other)
     {
         RecordGameOver();
         DefeatTitleText.enabled = true;
+        DefeatKilledSubtitleText.text = string.Format("You were killed by {0}", other.transform.parent.name);
         DefeatKilledSubtitleText.enabled = true;
         DefeatKilledSound.Play();
         DefeatMusic.Play();

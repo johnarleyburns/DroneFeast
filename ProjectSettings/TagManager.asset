@@ -13,6 +13,13 @@ TagManager:
   - MainMenuCanvas
   - EnemyNBody
   - GameOptions
+  - WeaponModel
+  - WeaponNBody
+  - EnemyModel
+  - PlayerNBody
+  - PlayerModel
+  - EnvironmentNBody
+  - EnvironmentModel
   layers:
   - Default
   - TransparentFX
