@@ -11,6 +11,12 @@ public class ScoreController : MonoBehaviour {
     public GameObject CountdownCylinderGreen;
     public GameObject CountdownCylinderYellow;
     public GameObject CountdownCylinderRed;
+    public GameObject DroneCounter;
+    public GameObject DroneIconPrefab;
+    public float DroneIconSpacing;
+    public float DroneIconScale;
+    public GameObject DroneKillPrefab;
+    public float DroneKillScale;
     public Text CountdownText;
     public Text RemainingText;
     public AudioSource KillAS;
@@ -143,12 +149,55 @@ public class ScoreController : MonoBehaviour {
         CountdownText.text = string.Format("{0:00}:{1:00}", min, sec);
         RemainingText.text = string.Format("{0:00}", remainingCounter);
 
+        SyncTimeCounter();
+        SyncDroneCounter();
+    }
+
+    private void SyncTimeCounter()
+    {
         float greenCutoffPct = 0.3f;
         float yellowCutoffPct = 0.1f;
         float timeLeftPct = ((float)countdown) / ((float)CountdownSec);
         SetTimeCylinder(CountdownCylinderGreen, greenCutoffPct, 1.0f, timeLeftPct);
         SetTimeCylinder(CountdownCylinderYellow, yellowCutoffPct, greenCutoffPct, timeLeftPct);
         SetTimeCylinder(CountdownCylinderRed, 0f, yellowCutoffPct, timeLeftPct);
+    }
+
+    private List<GameObject> DroneCounterIcons = new List<GameObject>();
+    private List<GameObject> DroneKillIcons = new List<GameObject>();
+
+    private void SyncDroneCounter()
+    {
+        if (DroneCounterIcons.Count == 0)
+        {
+            // initialize
+            for (int i = 0; i < StartingTargetCount; i++)
+            {
+                GameObject d = Instantiate(DroneIconPrefab, DroneCounter.transform);
+                d.transform.localScale = new Vector3(DroneIconScale, DroneIconScale, DroneIconScale);
+                Vector3 p = d.transform.localPosition;
+                float posX = i * DroneIconSpacing;
+                d.transform.localPosition = new Vector3(posX, 0, 0);
+                DroneCounterIcons.Add(d);
+            }
+        }
+        int droneKills = StartingTargetCount - remainingCounter;
+        if (DroneKillIcons.Count < droneKills)
+        {
+            int extra = droneKills - DroneKillIcons.Count;
+            int existingCount = DroneKillIcons.Count;
+            for (int i = 0; i < extra; i++)
+            {
+                GameObject d = Instantiate(DroneKillPrefab, DroneCounter.transform);
+                d.transform.localRotation = Quaternion.identity;
+                d.transform.localScale = new Vector3(DroneKillScale, DroneKillScale, DroneKillScale);
+                Vector3 p = d.transform.localPosition;
+                float posX = (existingCount + i) * DroneIconSpacing;
+                d.transform.localPosition = new Vector3(posX, 0, 0);
+                DroneCounterIcons[DroneKillIcons.Count].SetActive(false);
+                DroneKillIcons.Add(d);
+            }
+        }
     }
 
     private void SetTimeCylinder(GameObject c, float minCutoffPct, float maxCutoffPct, float timeLeftPct)
