@@ -8,6 +8,9 @@ using Crosstales.RTVoice;
 public class ScoreController : MonoBehaviour {
 
     public int CountdownSec;
+    public GameObject CountdownCylinderGreen;
+    public GameObject CountdownCylinderYellow;
+    public GameObject CountdownCylinderRed;
     public Text CountdownText;
     public Text RemainingText;
     public AudioSource KillAS;
@@ -139,8 +142,27 @@ public class ScoreController : MonoBehaviour {
         int sec = cd % 60;
         CountdownText.text = string.Format("{0:00}:{1:00}", min, sec);
         RemainingText.text = string.Format("{0:00}", remainingCounter);
+
+        float greenCutoffPct = 0.3f;
+        float yellowCutoffPct = 0.1f;
+        float timeLeftPct = ((float)countdown) / ((float)CountdownSec);
+        SetTimeCylinder(CountdownCylinderGreen, greenCutoffPct, 1.0f, timeLeftPct);
+        SetTimeCylinder(CountdownCylinderYellow, yellowCutoffPct, greenCutoffPct, timeLeftPct);
+        SetTimeCylinder(CountdownCylinderRed, 0f, yellowCutoffPct, timeLeftPct);
     }
 
+    private void SetTimeCylinder(GameObject c, float minCutoffPct, float maxCutoffPct, float timeLeftPct)
+    {
+        if (timeLeftPct < maxCutoffPct)
+        {
+            float timeLeftThisPct = timeLeftPct < minCutoffPct ? 0 : timeLeftPct - minCutoffPct;
+            float timePosY = 1 - 2 * minCutoffPct - timeLeftThisPct;
+            float timeScaleY = timeLeftThisPct;
+            Transform t = c.transform;
+            t.localPosition = new Vector3(t.localPosition.x, timePosY, t.localPosition.z);
+            t.localScale = new Vector3(t.localScale.x, timeScaleY, t.localScale.z);
+        }
+    }
 
     public void PlayerDeath(GameObject other)
     {
