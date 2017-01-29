@@ -78,11 +78,11 @@ public class GravityEngineEditor : Editor {
 					break;
 			case GravityScaler.Units.SI:
 //					// mass scale is controlled by time exclusivly
-//					EditorGUILayout.LabelField("m/kg/sec.");
+					EditorGUILayout.LabelField("m/kg/sec.");
 //					// meters per Unity unit in the case of meters
-//					lengthScale = EditorGUILayout.DelayedFloatField(new GUIContent("m per Unity unit", timeTip), 1f/gravityEngine.lengthScale);
-//					timeScale = EditorGUILayout.DelayedFloatField(new GUIContent("Game sec. per sec.", timeTip), gravityEngine.timeScale);
-//					break;
+					lengthScale = EditorGUILayout.DelayedFloatField(new GUIContent("m per Unity unit", timeTip), 1f/gravityEngine.lengthScale);
+					timeScale = EditorGUILayout.DelayedFloatField(new GUIContent("Game sec. per sec.", timeTip), gravityEngine.timeScale);
+					break;
 			case GravityScaler.Units.ORBITAL:
 					// mass scale is controlled by time exclusivly
 					EditorGUILayout.LabelField("km/1E24 kg/hr");
