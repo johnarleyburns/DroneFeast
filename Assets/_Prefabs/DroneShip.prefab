@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 114984841797808812}
   - component: {fileID: 114743308611678192}
   m_Layer: 0
-  m_Name: DroneShip1
+  m_Name: DroneShip
   m_TagString: EnemyNBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
   Scorer: {fileID: 0}
   Indicator: {fileID: 0}
   TargetTracker: {fileID: 0}
-  ShipExplosion: {fileID: 1056987025464372, guid: b04f64f5ba7eda6409b8bb8b9dd91e34,
+  ShipExplosion: {fileID: 1672416225302190, guid: 4220b153ddff8e345b111d7935043410,
     type: 2}
 --- !u!114 &114743308611678192
 MonoBehaviour:

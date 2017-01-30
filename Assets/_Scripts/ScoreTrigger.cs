@@ -25,18 +25,25 @@ public class ScoreTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //        if (other.gameObject.tag == "Enemy")
-        //        {
+        RecordHit();
+    }
+
+    public void RecordHit()
+    {
         Scorer.ScoreHit();
+
         GameObject nBody = transform.parent.gameObject;
-        GameObject p = Instantiate(ShipExplosion);
-        p.transform.position = nBody.transform.position;
-        p.GetComponent<ParticleSystem>().Play();
+        GameObject p = Instantiate(ShipExplosion, nBody.transform.position, nBody.transform.rotation, null);
+        Vector3 v = GravityEngine.instance.GetVelocity(nBody);
+        GravityEngine.instance.AddBody(p);
+        GravityEngine.instance.UpdatePositionAndVelocity(p.GetComponent<NBody>(), nBody.transform.position, v);
+
         Indicator.RemoveIndicator(nBody.transform);
         TargetTracker.RemoveTarget(nBody);
         GravityEngine.instance.InactivateBody(nBody);
         nBody.SetActive(false);
         Destroy(gameObject);
-        //        }
+
     }
+
 }
