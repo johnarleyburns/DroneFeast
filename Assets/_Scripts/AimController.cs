@@ -33,7 +33,7 @@ public class AimController : MonoBehaviour {
             x = Input.GetAxis("Horizontal");
             y = Input.GetAxis("Vertical");
             z = Input.GetAxis("Roll");
-            k = Input.GetAxisRaw("KillRotation");
+            k = Input.GetAxis("KillRotation");
         }
         else
         {
@@ -53,7 +53,6 @@ public class AimController : MonoBehaviour {
 
         Quaternion q = Quaternion.identity;
 
-        /*
         if (killRot)
         {
             killingRot = true;
@@ -67,39 +66,6 @@ public class AimController : MonoBehaviour {
         if (killingRot)
         {
             q = KillRotQ();
-            if (q == Quaternion.identity)
-            {
-                killingRot = false;
-            }
-        }
-        */
-
-        if (rcsInput)
-        {
-            killingRot = false;
-            q = RotInput(x, y, z);
-        }
-        else
-        {
-            float angle;
-            Vector3 axis;
-            spin.ToAngleAxis(out angle, out axis);
-            if (angle != 0)
-            {
-                killingRot = true;
-            }
-        }
-
-        if (killingRot)
-        {
-            q = KillRotQ();
-            float angle;
-            Vector3 axis;
-            q.ToAngleAxis(out angle, out axis);
-            if (angle != 0)
-            {
-                killingRot = false;
-            }
         }
 
         spin = q * spin;
@@ -128,11 +94,7 @@ public class AimController : MonoBehaviour {
 
     private Quaternion KillRotQ()
     {
-        //       Quaternion q = Quaternion.Slerp(Quaternion.identity, Quaternion.Inverse(spin), Time.deltaTime);
-        float angle;
-        Vector3 axis;
-        spin.ToAngleAxis(out angle, out axis);
-        Quaternion dest = Quaternion.AngleAxis(0, axis);
+        Quaternion dest = Quaternion.identity;
         Quaternion q = Quaternion.Slerp(dest, Quaternion.Inverse(spin), Time.deltaTime);
         return q;
     }
