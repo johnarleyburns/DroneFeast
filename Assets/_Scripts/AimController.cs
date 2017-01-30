@@ -7,9 +7,8 @@ public class AimController : MonoBehaviour {
 
     public ScoreController Scorer;
     public AudioSource AimAS;
-
-    private float controlFactor = 0.4f;
-    private float killRotFactor = 0.6f;
+    public float controlFactor = 0.4f;
+    public float killRotFactor = 0.6f;
 
     private Quaternion spin = Quaternion.identity;
     private bool killingRot = false;
