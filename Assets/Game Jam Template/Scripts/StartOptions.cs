@@ -84,27 +84,33 @@ public class StartOptions : MonoBehaviour {
 		}	
 	}
 
+    private bool loading = false;
 
 	public void LoadDelayed()
 	{
-		//Pause button now works if escape is pressed since we are no longer in Main menu.
-		inMainMenu = false;
+        if (!loading)
+        {
+            loading = true;
 
-		//Hide the main menu UI element
-		showPanels.HideMenu ();
+            //Pause button now works if escape is pressed since we are no longer in Main menu.
+            inMainMenu = false;
 
-        //Load the selected scene, by scene index number in build settings
-        GameOptions uiOptions = GetComponent<GameOptions>();
-        GameObject optionsG = new GameObject("GameOptions");
-        optionsG.AddComponent<GameOptions>();
-        optionsG.GetComponent<GameOptions>().SetFrom(uiOptions);
-        optionsG.tag = "GameOptions";
-        DontDestroyOnLoad(optionsG);
+            //Hide the main menu UI element
+            showPanels.HideMenu();
 
-        SceneManager.LoadScene (sceneToStart);
-        Scene scene = SceneManager.GetSceneAt(sceneToStart);
-        SceneManager.MoveGameObjectToScene(optionsG, scene);
-	}
+            //Load the selected scene, by scene index number in build settings
+            GameOptions uiOptions = GetComponent<GameOptions>();
+            GameObject optionsG = new GameObject("GameOptions");
+            optionsG.AddComponent<GameOptions>();
+            optionsG.GetComponent<GameOptions>().SetFrom(uiOptions);
+            optionsG.tag = "GameOptions";
+            DontDestroyOnLoad(optionsG);
+
+            SceneManager.LoadScene(sceneToStart);
+            Scene scene = SceneManager.GetSceneAt(sceneToStart);
+            SceneManager.MoveGameObjectToScene(optionsG, scene);
+        }
+    }
 
 	public void HideDelayed()
 	{
