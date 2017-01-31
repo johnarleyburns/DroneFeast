@@ -21,6 +21,7 @@ TagManager:
   - EnvironmentNBody
   - EnvironmentModel
   - Orbit
+  - Indicator
   layers:
   - Default
   - TransparentFX
